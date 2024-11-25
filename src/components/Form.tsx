@@ -224,7 +224,7 @@ const Form = () => {
       formDataToSend.append('image', file);
 
       // Upload image to ImgBB
-      const imgbbResponse = await fetch(`https://api.imgbb.com/1/upload?key=73564a8db15fec16e85be690bb51bb5d`, {
+      const imgbbResponse = await fetch(`https://api.imgbb.com/1/upload?key=${process.env.NEXT_PUBLIC_IMG_BB_API}`, {
         method: 'POST',
         body: formDataToSend,
       });
